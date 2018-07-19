@@ -3,8 +3,8 @@ class SongsController < ApplicationController
     if params[:artist_id]
       if Song.find(params[:artist_id])
       @songs = Song.find(params[:artist_id]).songs
-    rescue ActiveRecord::RecordNotFound
-      redirect_to(index, :alert => "Artist not found")
+        rescue ActiveRecord::RecordNotFound
+        redirect_to(index, :alert => "Artist not found")
     else
     @songs = Song.all
   end
