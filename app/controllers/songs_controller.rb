@@ -6,7 +6,7 @@ class SongsController < ApplicationController
     @songs = Song.all
       end
     rescue ActiveRecord::RecordNotFound
-    redirect_to(index, :alert => "Artist not found")
+    redirect_to(root_url, :alert => "Artist not found")
   end
 
   def show
