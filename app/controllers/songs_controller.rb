@@ -7,7 +7,7 @@ class SongsController < ApplicationController
       end
     rescue ActiveRecord::RecordNotFound
       params.delete(:artist_id)
-    redirect_to(songs_url, :alert => "Artist not found")
+    redirect_to(artists_url, :alert => "Artist not found")
   end
 
   def show
